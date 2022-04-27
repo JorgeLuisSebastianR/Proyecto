@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// puto el emanems
+// perdon profe no recorde que lo podía ver xd
 
 Route::get('/', function () {
     return view('welcome');
