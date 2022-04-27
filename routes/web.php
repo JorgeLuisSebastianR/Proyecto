@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// perdon profe no recorde que lo podía ver xd
+// perdon profe no recorde que lo podía ver xdd
 
 Route::get('/', function () {
     return view('welcome');
