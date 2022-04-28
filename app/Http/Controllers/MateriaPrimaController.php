@@ -8,70 +8,76 @@ use App\Http\Requests\UpdateMateriaPrimaRequest;
 
 class MateriaPrimaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         //
+        return view('materiaprimas.index')->with('materiaprimas', MateriaPrima::all());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
+        return view('materiaprimas.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreMateriaPrimaRequest  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(StoreMateriaPrimaRequest $request)
     {
         //
+        $request->validate([
+            'tipo' => 'required',
+            'nombre' => 'required',
+            'marca' => 'required',
+            'modelo' => 'required',
+            'cantidad' => 'required',
+            'alto' => 'required',
+            'largo' => 'required',
+            'ancho' => 'required'
+        ]);
+
+        MateriaPrima::create([
+            'tipo' => $request->tipo,
+            'nombre' => $request->nombre,
+            'marca' => $request->marca,
+            'modelo' => $request->modelo,
+            'cantidad' => $request->cantidad,
+            'alto' => $request->alto,
+            'largo' => $request->largo,
+            'ancho' => $request->ancho
+        ]);
+        return redirect()->route('materiaPrima.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\MateriaPrima  $materiaPrima
-     * @return \Illuminate\Http\Response
-     */
     public function show(MateriaPrima $materiaPrima)
     {
         //
+        return view('materiaPrimas.show', compact('materiaPrima'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\MateriaPrima  $materiaPrima
-     * @return \Illuminate\Http\Response
-     */
     public function edit(MateriaPrima $materiaPrima)
     {
         //
+        return view('materiaPrimas.show', compact('materiaPrima'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateMateriaPrimaRequest  $request
-     * @param  \App\Models\MateriaPrima  $materiaPrima
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(UpdateMateriaPrimaRequest $request, MateriaPrima $materiaPrima)
     {
         //
-    }
+        $request->validate([
+            'tipo' => 'required',
+            'nombre' => 'required',
+            'marca' => 'required',
+            'modelo' => 'required',
+            'cantidad' => 'required',
+            'alto' => 'required',
+            'largo' => 'required',
+            'ancho' => 'required'
+        ]);
+
+        $materiaPrima->update($request->all());
+        return redirect()->route('materiaPrima.index');
+    } /// aquí me quede xd ----------------------------------------------------------------------------------
 
     /**
      * Remove the specified resource from storage.
