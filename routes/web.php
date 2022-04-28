@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// emanems
+
 Route::get('/', function () {
     return view('welcome');
 });
