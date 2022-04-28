@@ -18,9 +18,11 @@ return new class extends Migration
             $table->string('tipo',50);
             $table->string('nombre',100);
             $table->string('marca',50);
-            $table->string('modelo',50);
+            $table->string('modelo',50)->nullable();
             $table->integer('cantidad');
-            $table->string('dimensiones',50);
+            $table->decimal('alto',3,3)->nullable();
+            $table->decimal('largo',3,3)->nullable();
+            $table->decimal('ancho',3,3)->nullable();
             $table->timestamps();
         });
     }
