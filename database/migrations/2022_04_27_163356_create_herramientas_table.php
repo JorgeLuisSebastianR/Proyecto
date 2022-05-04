@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 //aaaaaaaaaaax
+=======
+
+>>>>>>> cc437e7f32bc22c4b63bbe375e0f48e5d4735cce
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
