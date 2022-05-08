@@ -45,19 +45,19 @@ class MateriaPrimaController extends Controller
             'largo' => $request->largo,
             'ancho' => $request->ancho
         ]);
-        return redirect()->route('materiaPrima.index');
+        return redirect()->route('materiaprima.index');
     }
 
     public function show(MateriaPrima $materiaPrima)
     {
         //
-        return view('materiaPrimas.show', compact('materiaPrima'));
+        return view('materiaprimas.show', compact('materiaprima'));
     }
 
     public function edit(MateriaPrima $materiaPrima)
     {
         //
-        return view('materiaPrimas.show', compact('materiaPrima'));
+        return view('materiaprimas.edit', compact('materiaprima'));
     }
 
 
@@ -76,17 +76,13 @@ class MateriaPrimaController extends Controller
         ]);
 
         $materiaPrima->update($request->all());
-        return redirect()->route('materiaPrima.index');
+        return redirect()->route('materiaprima.index');
     } /// aquí me quede xd ----------------------------------------------------------------------------------
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\MateriaPrima  $materiaPrima
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(MateriaPrima $materiaPrima)
     {
-        //
+        $materiaPrima->delete();
+        return redirect()->route('materiaprima.index');
     }
 }
