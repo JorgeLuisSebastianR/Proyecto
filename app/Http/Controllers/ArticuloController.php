@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\herramienta;
-use App\Http\Requests\StoreherramientaRequest;
-use App\Http\Requests\UpdateherramientaRequest;
+use App\Models\articulo;
+use App\Http\Requests\StorearticuloRequest;
+use App\Http\Requests\UpdatearticuloRequest;
 
-class HerramientaController extends Controller
+class ArticuloController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class HerramientaController extends Controller
      */
     public function index()
     {
-        //holahhhhhgg
+        //
     }
 
     /**
@@ -31,10 +31,10 @@ class HerramientaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreherramientaRequest  $request
+     * @param  \App\Http\Requests\StorearticuloRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreherramientaRequest $request)
+    public function store(StorearticuloRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class HerramientaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\herramienta  $herramienta
+     * @param  \App\Models\articulo  $articulo
      * @return \Illuminate\Http\Response
      */
-    public function show(herramienta $herramienta)
+    public function show(articulo $articulo)
     {
         //
     }
@@ -53,10 +53,10 @@ class HerramientaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\herramienta  $herramienta
+     * @param  \App\Models\articulo  $articulo
      * @return \Illuminate\Http\Response
      */
-    public function edit(herramienta $herramienta)
+    public function edit(articulo $articulo)
     {
         //
     }
@@ -64,11 +64,11 @@ class HerramientaController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateherramientaRequest  $request
-     * @param  \App\Models\herramienta  $herramienta
+     * @param  \App\Http\Requests\UpdatearticuloRequest  $request
+     * @param  \App\Models\articulo  $articulo
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateherramientaRequest $request, herramienta $herramienta)
+    public function update(UpdatearticuloRequest $request, articulo $articulo)
     {
         //
     }
@@ -76,10 +76,10 @@ class HerramientaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\herramienta  $herramienta
+     * @param  \App\Models\articulo  $articulo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(herramienta $herramienta)
+    public function destroy(articulo $articulo)
     {
         //
     }
