@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class MateriaPrima extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'tipo',
+        'nombre',
+        'marca',
+        'modelo',
+        'cantidad',
+        'alto',
+        'largo',
+        'ancho'
+    ];
 }
