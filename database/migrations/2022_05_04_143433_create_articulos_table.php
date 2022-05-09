@@ -15,10 +15,21 @@ return new class extends Migration
     {
         Schema::create('articulos', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nombre',20);
+            $table->string('tipo',20);
+            $table->string('modelo',20);
+            $table->text('decripcion',20);
+            $table->string('mateterialFabricacion',30);
+            $table->unsignedDecimal('precio',8,2)-> default(0.00);
+            $table->integer('stock');
+            $table->timestamps();  
+            
+       
+            
+
         });
     }
-
+ 
     /**
      * Reverse the migrations.
      *

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\articulo;
 use App\Http\Requests\StorearticuloRequest;
 use App\Http\Requests\UpdatearticuloRequest;
-
+ 
 class ArticuloController extends Controller
 {
     /**
@@ -15,7 +15,8 @@ class ArticuloController extends Controller
      */
     public function index()
     {
-        //
+       $articulos = articulo::all();
+       return view('articulos.index',compact('articulos'));
     }
 
     /**
