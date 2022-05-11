@@ -16,6 +16,7 @@ Route::resources([
     'materiaprimas' => MateriaPrimaController::class
 ]);
 //>>>>>>> be7743ee62fdef2eedc02818df4351c62a69aa4d
+//asdfasdfasdfasdf
 
 Route::get('/', function () {
     return view('welcome');
