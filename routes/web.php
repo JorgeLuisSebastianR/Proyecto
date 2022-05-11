@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 //<<<<<<< HEAD
 use App\Http\Controllers\ArticuloController;
-
+//marck
 
 Route ::resources([
 'articulos' => ArticuloController::class,
