@@ -52,8 +52,8 @@
                         <td>{{ $materiaPrima->largo }}</td>
                         <td>{{ $materiaPrima->ancho }}</td>
                         <td>
-                            <form action="{{ route('materiaPrima.destroy', $computadora->id) }}" method = "POST">
-                                <a class = "button is-info is-small" href="{{ route('materiaPrima.show', $materiaPrima->id }}">Ver</a>
+                            <form action="{{ route('materiaPrima.destroy', $materia_primas->id) }}" method = "POST">
+                                <a class = "button is-info is-small" href="{{ route('materiaPrima.show', $materiaPrima->id) }}">Ver</a>
                                 <a class = "button is-info is-small" href="{{ route('materiaPrima.edit', $materiaPrima-id) }}">Editar</a>
                                 @csrf
                                 @method('DELETE')
