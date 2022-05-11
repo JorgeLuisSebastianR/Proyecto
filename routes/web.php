@@ -8,7 +8,7 @@ use App\Http\Controllers\ArticuloController;
 =======
 //marck
 >>>>>>> 1641c2a0e2a307cc2fa02d5d9430f4acaf21077f
-
+//1
 Route ::resources([
 'articulos' => ArticuloController::class,
 ]);
